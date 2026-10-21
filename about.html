@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10100e">
+  <meta name="description" content="Discover the AURUM Coffee House philosophy: thoughtful craft, exceptional coffee, and meaningful moments.">
+  <title>Our Story | AURUM Coffee House</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#10100e;--panel:#181815;--panel2:#20201b;--gold:#d8b779;--gold2:#f0d9a5;--cream:#f6f0e5;--muted:#b9b3a7;--line:rgba(240,217,165,.18);--max:1180px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--bg);color:var(--cream);font-family:"DM Sans",sans-serif;line-height:1.7}a{color:inherit;text-decoration:none}button{font:inherit}.skip{position:absolute;left:-999px;top:8px;background:var(--gold);color:#111;padding:10px 14px;z-index:100}.skip:focus{left:10px}
+    .header{height:84px;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:0 max(5vw,24px);border-bottom:1px solid rgba(255,255,255,.07);background:rgba(16,16,14,.92);position:sticky;top:0;z-index:20;backdrop-filter:blur(16px)}
+    .brand{font-size:27px;letter-spacing:.2em;font-weight:700;line-height:1;color:var(--gold2)}.brand small{display:block;font-size:9px;letter-spacing:.34em;color:var(--cream);margin-top:8px;font-weight:500}
+    .nav{display:flex;align-items:center;gap:32px;font-size:13px;color:#d3cbbd}.nav a{transition:color .2s}.nav a:hover,.nav a.active{color:var(--gold2)}.nav .nav-cta{border:1px solid var(--gold);padding:11px 17px;color:var(--gold2)}.nav .nav-cta:hover{background:var(--gold);color:#17140e}.menu-btn{display:none;background:none;color:var(--cream);border:1px solid var(--line);padding:9px 12px}
+    .wrap{width:min(var(--max),90%);margin-inline:auto}.eyebrow{font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);font-weight:700}.serif{font-family:"Playfair Display",Georgia,serif;font-weight:500;letter-spacing:-.035em}.hero{position:relative;overflow:hidden;min-height:550px;display:grid;align-items:center;border-bottom:1px solid var(--line);background:linear-gradient(90deg,rgba(12,12,10,.96) 0%,rgba(12,12,10,.78) 48%,rgba(12,12,10,.18) 100%),url('https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=2000&q=90') center 52%/cover no-repeat}
+    .hero:after{content:"";position:absolute;inset:auto 0 0;height:100px;background:linear-gradient(transparent,var(--bg));pointer-events:none}.hero-content{position:relative;z-index:1;max-width:660px;padding:95px 0 110px}.hero h1{font-size:clamp(48px,7.3vw,88px);line-height:1.04;margin:20px 0 24px}.hero h1 em,.section-title em,.cta h2 em{color:var(--gold2);font-weight:500}.hero p{max-width:500px;color:#d2cabe;font-size:16px}.actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:14px;padding:14px 20px;background:var(--gold);color:#17140e;font-size:12px;font-weight:700;letter-spacing:.04em;border:1px solid var(--gold);transition:transform .2s,background .2s}.btn:hover{transform:translateY(-3px);background:var(--gold2)}.btn.secondary{background:transparent;color:var(--cream);border-color:rgba(246,240,229,.35)}.btn.secondary:hover{border-color:var(--gold);color:var(--gold2)}
+    .intro-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding:27px 0;border-bottom:1px solid var(--line)}.strip-item{display:flex;align-items:center;gap:14px}.strip-icon{width:40px;height:40px;border:1px solid var(--line);display:grid;place-items:center;color:var(--gold);font-size:18px;flex:none}.strip-item strong{display:block;font-size:12px;letter-spacing:.04em}.strip-item span{display:block;font-size:11px;color:var(--muted);margin-top:2px}
+    .section{padding:105px 0}.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,8vw,100px);align-items:center}.story-image{min-height:520px;position:relative;background:url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1100&q=90') center/cover;border:1px solid var(--line)}.image-tag{position:absolute;right:-18px;bottom:26px;background:var(--gold);color:#17140e;padding:20px 23px;max-width:205px;font-family:"Playfair Display",serif;font-size:20px;line-height:1.3}.image-tag small{display:block;font:700 9px "DM Sans",sans-serif;letter-spacing:.18em;text-transform:uppercase;margin-bottom:7px}.section-title{font-size:clamp(38px,5vw,61px);line-height:1.1;margin:15px 0 23px}.copy{color:var(--muted);font-size:14px;line-height:1.95}.story-copy .copy{max-width:520px}.signature{display:flex;align-items:center;gap:15px;margin-top:28px;color:var(--gold2);font-family:"Playfair Display",serif;font-size:20px}.signature:before{content:"";width:42px;height:1px;background:var(--gold)}
+    .values{background:var(--panel);border-block:1px solid rgba(255,255,255,.04)}.section-head{text-align:center;max-width:650px;margin:0 auto 48px}.section-head .copy{max-width:560px;margin:0 auto}.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.value{padding:30px 28px 32px;border:1px solid rgba(240,217,165,.14);background:linear-gradient(145deg,rgba(255,255,255,.025),transparent);min-height:245px;transition:transform .25s,border-color .25s}.value:hover{transform:translateY(-6px);border-color:rgba(240,217,165,.5)}.value-number{font-size:11px;letter-spacing:.18em;color:var(--gold)}.value-icon{font-size:26px;color:var(--gold2);margin:24px 0 8px}.value h3{font-family:"Playfair Display",serif;font-size:24px;font-weight:500;margin:0 0 10px}.value p{color:var(--muted);font-size:13px;margin:0}
+    .quote-section{padding:100px 0;text-align:center}.quote-mark{font-family:"Playfair Display",serif;color:var(--gold);font-size:70px;line-height:.7}.quote{font-family:"Playfair Display",serif;font-size:clamp(29px,4vw,47px);line-height:1.25;max-width:850px;margin:22px auto}.quote-note{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+    .cta{position:relative;overflow:hidden;margin-bottom:90px;padding:65px 7%;display:flex;align-items:center;justify-content:space-between;gap:30px;background:linear-gradient(100deg,rgba(16,16,14,.98),rgba(16,16,14,.78)),url('https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1600&q=85') center/cover;border:1px solid var(--line)}.cta h2{font-size:clamp(34px,4vw,52px);line-height:1.12;margin:10px 0}.cta p{font-size:13px;color:var(--muted);max-width:480px}.footer{border-top:1px solid var(--line);padding:30px 5%;display:flex;align-items:center;justify-content:space-between;gap:22px;color:var(--muted);font-size:11px}.footer .brand{font-size:20px}.footer .brand small{font-size:7px}.footer-links{display:flex;gap:22px}.footer a:hover{color:var(--gold2)}.footer-note{font-size:10px}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}
+    @media(max-width:800px){.header{height:74px}.menu-btn{display:block}.nav{display:none;position:absolute;top:73px;left:0;right:0;background:#151512;border-bottom:1px solid var(--line);padding:20px 5%;flex-direction:column;align-items:stretch;gap:18px}.nav.open{display:flex}.nav .nav-cta{text-align:center}.hero{min-height:510px;background-position:58% center}.hero-content{padding:75px 0 95px}.intro-strip{grid-template-columns:1fr;gap:18px}.strip-item{max-width:360px}.section{padding:75px 0}.story-grid{grid-template-columns:1fr;gap:42px}.story-image{min-height:420px;margin-right:14px;order:2}.story-copy{order:1}.values-grid{grid-template-columns:1fr}.value{min-height:0}.value-icon{margin-top:15px}.quote-section{padding:75px 0}.cta{margin-bottom:65px;flex-direction:column;align-items:flex-start;padding:40px 28px}.footer{flex-wrap:wrap}.footer-note{width:100%;margin:0}}@media(max-width:460px){.brand{font-size:23px}.hero h1{font-size:47px}.hero p{font-size:14px}.actions .btn{width:100%}.story-image{min-height:340px}.image-tag{right:-12px;max-width:175px;font-size:17px;padding:16px}.footer{align-items:flex-start}.footer-links{width:100%;order:3}.footer p{margin:0}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="header">
+    <a class="brand" href="index.html" aria-label="AURUM Coffee House home">AURUM<small>COFFEE HOUSE</small></a>
+    <button class="menu-btn" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">MENU ☰</button>
+    <nav class="nav" id="primary-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a><a href="menu.html">Our Menu</a><a class="active" href="about.html" aria-current="page">Our Story</a><a class="nav-cta" href="contact.html">Plan a Visit ↗</a>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero">
+      <div class="wrap hero-content">
+        <p class="eyebrow">A little pause in a busy world</p>
+        <h1 class="serif">More than coffee.<br><em>It's a feeling.</em></h1>
+        <p>Thoughtfully made coffee. A welcoming space. Moments worth slowing down for. Welcome to the AURUM way of doing things.</p>
+        <div class="actions"><a class="btn" href="menu.html">Explore our menu <span>↗</span></a><a class="btn secondary" href="#philosophy">Discover our story <span>↓</span></a></div>
+      </div>
+    </section>
+    <div class="wrap intro-strip" aria-label="Our values at a glance">
+      <div class="strip-item"><div class="strip-icon" aria-hidden="true">✳</div><div><strong>Crafted with intention</strong><span>Care in every cup</span></div></div>
+      <div class="strip-item"><div class="strip-icon" aria-hidden="true">◌</div><div><strong>Made for your moment</strong><span>Pause, connect, recharge</span></div></div>
+      <div class="strip-item"><div class="strip-icon" aria-hidden="true">⌂</div><div><strong>A place to belong</strong><span>Warm, thoughtful hospitality</span></div></div>
+    </div>
+    <section class="section wrap" id="philosophy">
+      <div class="story-grid">
+        <div class="story-copy reveal">
+          <p class="eyebrow">The AURUM philosophy</p>
+          <h2 class="section-title serif">Slow down.<br>Savour the <em>moment.</em></h2>
+          <p class="copy">We believe the best café experiences are often found in the little things: the aroma of freshly prepared coffee, the first comforting sip, and a space that makes you feel welcome the moment you arrive.</p>
+          <p class="copy">AURUM is built around that feeling. We bring together considered details, a love of coffee, and the simple pleasure of taking a moment for yourself—or sharing it with someone else.</p>
+          <p class="copy">Because coffee should be more than something you order. It should be a ritual you look forward to.</p>
+          <div class="signature">The AURUM experience</div>
+        </div>
+        <div class="story-image reveal" role="img" aria-label="A warm coffee-making scene with cups and freshly prepared coffee">
+          <div class="image-tag"><small>Our belief</small>Great coffee.<br>Good company.</div>
+        </div>
+      </div>
+    </section>
+    <section class="section values">
+      <div class="wrap">
+        <div class="section-head reveal"><p class="eyebrow">What guides us</p><h2 class="section-title serif">The Aurum <em>standard.</em></h2><p class="copy">Every detail should feel considered—from what is in the cup to how you feel when you walk through the door.</p></div>
+        <div class="values-grid">
+          <article class="value reveal"><div class="value-number">01 / QUALITY</div><div class="value-icon" aria-hidden="true">✧</div><h3>Quality first</h3><p>Thoughtful ingredients and carefully prepared drinks are at the heart of every cup we serve.</p></article>
+          <article class="value reveal"><div class="value-number">02 / CRAFT</div><div class="value-icon" aria-hidden="true">♨</div><h3>Made with care</h3><p>We celebrate the small details, the patience behind the process, and the craft in every pour.</p></article>
+          <article class="value reveal"><div class="value-number">03 / HOSPITALITY</div><div class="value-icon" aria-hidden="true">♡</div><h3>Always welcoming</h3><p>A comfortable place to catch up with friends, focus on a project, or simply enjoy a quiet moment.</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="quote-section wrap reveal">
+      <div class="quote-mark" aria-hidden="true">“</div>
+      <blockquote class="quote">The best moments don't need to be grand. Sometimes, they're simply a good coffee and time to enjoy it.</blockquote>
+      <p class="quote-note">The AURUM state of mind</p>
+    </section>
+    <section class="wrap">
+      <div class="cta reveal">
+        <div><p class="eyebrow">Your next favourite moment</p><h2 class="serif">Come for the coffee.<br><em>Stay for the feeling.</em></h2><p>Explore the menu, discover your new favourite, and make AURUM part of your everyday ritual.</p></div>
+        <a class="btn" href="menu.html">Find your favourite ↗</a>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <a class="brand" href="index.html">AURUM<small>COFFEE HOUSE</small></a>
+    <p>© <span id="year">2026</span> AURUM Coffee House</p>
+    <div class="footer-links"><a href="index.html">Home</a><a href="menu.html">Menu</a><a href="contact.html">Contact</a></div>
+    <p class="footer-note">A thoughtful cup. A moment of your own.</p>
+  </footer>
+  <script>
+    const toggle = document.querySelector('.menu-btn');
+    const nav = document.querySelector('.nav');
+    toggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.textContent = open ? 'CLOSE ×' : 'MENU ☰';
+    });
+    nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.textContent = 'MENU ☰';
+    }));
+    document.querySelector('#year').textContent = new Date().getFullYear();
+    const items = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+      }), {threshold: 0.12});
+      items.forEach(item => observer.observe(item));
+    } else { items.forEach(item => item.classList.add('visible')); }
+  </script>
+</body>
+</html>
